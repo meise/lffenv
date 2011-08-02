@@ -1,0 +1,13 @@
+config mini_snmpd
+	option udp_port		'161'
+	option tcp_port 	'161'
+	option community	'mesh-community'
+	option description	'Freifunk Luebeck Mesh-Router'
+	option vendor		''
+	option location		''
+	option contact		'MetaMeute: Sonne macht albern. <metameute@asta.uni-luebeck.de>'
+	option disks		'/,/jffs'
+	option interfaces	'eth0.2,ath2'
+	option timeout		'1'
+	option auth		'0'
+	option verbose		'0'
