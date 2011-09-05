@@ -3,4 +3,4 @@
 # be executed with each firewall (re-)start.
 
 iptables -I INPUT -p tcp --dport 23 -j DROP
-ip6tables -I INPUT -p tcp --dport 23 -j DROP; ip6tables -I INPUT -p tcp -i eth0.2 --dport 23 -j ACCEPT
+ip6tables -I INPUT -p tcp --dport 23 -j DROP; ip6tables -I INPUT -p tcp -i eth0.2 -s fe80::/64 --dport 23 -j ACCEPT
