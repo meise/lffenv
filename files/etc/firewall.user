@@ -11,4 +11,4 @@ config_get ifname "wan" ifname
 iptables -I INPUT -p tcp --dport 23 -j DROP
 ip6tables -I INPUT -p tcp --dport 23 -j DROP
 
-ip6tables -I INPUT -p tcp -i "$ifname" -s fe80::/64 --dport 23 -j ACCEPT
+ip6tables -I INPUT -p tcp -i "$ifname" -d fe80::/64 --dport 23 -j ACCEPT
