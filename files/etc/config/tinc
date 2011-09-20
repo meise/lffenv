@@ -1,0 +1,11 @@
+config tinc-net 3micc
+	option enable 1
+
+	option generate_keys 1
+	option Name NONAME
+	option Mode switch
+	option Compression 10
+	option GraphDumpFile /tmp/log/tinc.3micc.dot
+
+config tinc-host NONAME
+	option net 3micc

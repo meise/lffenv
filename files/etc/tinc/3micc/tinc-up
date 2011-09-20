@@ -1,0 +1,8 @@
+#!/bin/sh
+
+ip link set up mtu 1280 dev $INTERFACE
+
+batctl if add $INTERFACE
+#ip link set up dev bat0
+
+#ip addr add 10.130.0.xx/16 dev bat0 2>/dev/null || true

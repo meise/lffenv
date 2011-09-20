@@ -1,0 +1,6 @@
+#!/bin/sh
+
+NAME="`ip link show eth0 | grep "link/ether" | \
+                sed "s/^[ ]*//" | cut -d' ' -f2 | sed "s/://g"`"
+
+[ -f /etc/config/tinc ] && sed -i "s/NONAME/$NAME/g" /etc/config/tinc
