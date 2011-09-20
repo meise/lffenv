@@ -11,7 +11,7 @@ config 'interface' 'mesh'
 	option 'gateway' '0.0.0.0'
 	option 'ifname' 'eth0.1 bat0 wlan0'
 
-config 'interface' 'lan'
+config 'interface' 'wan'
 	option 'ifname' 'eth0.2'
 	option 'proto' 'dhcp'
 
