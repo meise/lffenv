@@ -2,5 +2,13 @@
 # Put your custom iptables rules here, they will
 # be executed with each firewall (re-)start.
 
+. /etc/functions.sh
+
+config_load network
+config_get ifname "wan" ifname
+
+# Only allow telnet access from a link local address on the WAN port
 iptables -I INPUT -p tcp --dport 23 -j DROP
-ip6tables -I INPUT -p tcp --dport 23 -j DROP; ip6tables -I INPUT -p tcp -i eth0.2 -s fe80::/64 --dport 23 -j ACCEPT
+ip6tables -I INPUT -p tcp --dport 23 -j DROP
+
+ip6tables -I INPUT -p tcp -i "$ifname" -s fe80::/64 --dport 23 -j ACCEPT
