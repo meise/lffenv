@@ -7,7 +7,8 @@ config 'interface' 'loopback'
 
 config 'interface' 'mesh'
 	option 'type' 'bridge'
-	option 'proto' 'none'
+	option 'proto' 'dhcp'
+	option 'gateway' '0.0.0.0'
 	option 'ifname' 'eth0.1 bat0 wlan0'
 
 config 'interface' 'lan'
