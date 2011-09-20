@@ -4,8 +4,14 @@ config tinc-net 3micc
 	option generate_keys 1
 	option Name NONAME
 	option Mode switch
+	list ConnectTo aftermath
 	option Compression 10
 	option GraphDumpFile /tmp/log/tinc.3micc.dot
 
 config tinc-host NONAME
 	option net 3micc
+
+config tinc-host aftermath
+	option net 3micc
+	list Address 193.34.68.223
+	option Port 1194
