@@ -15,6 +15,12 @@ config 'interface' 'wan'
 	option 'ifname' 'eth0.2'
 	option 'proto' 'dhcp'
 
+config 'alias' 'wan_alias'
+	option 'interface' 'wan'
+	option 'proto' 'static'
+	option 'ipaddr' '192.168.20.81'
+	option 'netmask' '255.255.255.0'
+
 config 'interface' 'wlan'
 	option 'ifname' 'wlan2'
 	option 'proto'	'none'
