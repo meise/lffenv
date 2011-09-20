@@ -6,9 +6,11 @@
 
 config_load network
 config_get ifname "wan" ifname
+config_get ip4addr "wan_alias" ipaddr
 
 # Only allow telnet access from a link local address on the WAN port
 iptables -I INPUT -p tcp --dport 23 -j DROP
 ip6tables -I INPUT -p tcp --dport 23 -j DROP
 
+iptables -I INPUT -p tcp -i "$ifname" -d "$ip4addr" --dport 23 -j ACCEPT
 ip6tables -I INPUT -p tcp -i "$ifname" -d fe80::/64 --dport 23 -j ACCEPT
