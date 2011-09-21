@@ -1,5 +1,5 @@
 # Server configuration
-config uhttpd main
+config uhttpd info
 
 	# HTTP listen addresses, multiple allowed
 	list listen_http	192.168.10.1:80
@@ -10,7 +10,7 @@ config uhttpd main
 #	list listen_https	[::]:443
 
 	# Server document root
-	option home		/www
+	option home		/www-info
 
 	# Reject requests from RFC1918 IP addresses
 	# directed to the servers public IP(s).
