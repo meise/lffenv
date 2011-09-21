@@ -10,6 +10,7 @@ config tinc-net 3micc
 
 config tinc-host NONAME
 	option net 3micc
+	option Port 1194
 
 config tinc-host aftermath
 	option net 3micc
