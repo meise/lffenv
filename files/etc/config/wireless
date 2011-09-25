@@ -31,3 +31,12 @@ config wifi-iface wifi_adhoc
 	option bssid    02:22:B0:44:94:5D
 	option probereq 0
 	option rts      250
+
+config wifi-iface wifi_private
+	option device	radio0
+	option network	private
+	option mode	ap
+	option ssid	private
+	option rts	250
+	option encryption psk-mixed
+	option key	secret
