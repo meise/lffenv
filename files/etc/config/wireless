@@ -9,23 +9,23 @@ config wifi-device  radio0
 	# REMOVE THIS LINE TO ENABLE WIFI:
 	#option disabled 1
 
-config wifi-iface
+config wifi-iface wifi_mesh
 	option device   radio0
-	option ifname   wlan0
+	option network	mesh
 	option mode     ap
 	option ssid     luebeck.freifunk.net
 	option rts      250
 
-config wifi-iface
+config wifi-iface wifi_info
 	option device   radio0
-	option ifname   wlan1
+	option network	info
 	option mode     ap
 	option ssid     'luebeck.freifunk.net - Info'
 	option rts      250
 
-config wifi-iface
+config wifi-iface wifi_adhoc
 	option device   radio0
-	option ifname   wlan2
+	option network	adhoc
 	option mode     adhoc
 	option ssid     mesh.freifunk.net
 	option bssid    02:22:B0:44:94:5D
