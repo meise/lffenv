@@ -1,0 +1,4 @@
+#!/bin/sh
+
+ip link set up dev $INTERFACE
+brctl addif br-private $INTERFACE

@@ -10,6 +10,15 @@ config tinc-net intracity
 	option Compression 10
 	option GraphDumpFile /tmp/log/tinc.intracity.dot
 
+config tinc-net private
+	option enable 0
+
+	option generate_keys 1
+	option Name NONAME
+	option Mode switch
+	option Compression 10
+	option GraphDumpFile /tmp/log/tinc.private.dot
+
 config tinc-host NONAME
 	option net intracity
 	option Port 1194
