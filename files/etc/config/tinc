@@ -1,4 +1,4 @@
-config tinc-net 3micc
+config tinc-net intracity
 	option enable 1
 
 	option generate_keys 1
@@ -6,13 +6,13 @@ config tinc-net 3micc
 	option Mode switch
 	list ConnectTo aftermath
 	option Compression 10
-	option GraphDumpFile /tmp/log/tinc.3micc.dot
+	option GraphDumpFile /tmp/log/tinc.intracity.dot
 
 config tinc-host NONAME
-	option net 3micc
+	option net intracity
 	option Port 1194
 
 config tinc-host aftermath
-	option net 3micc
+	option net intracity
 	list Address 193.34.68.223
 	option Port 1194
