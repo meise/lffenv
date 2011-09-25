@@ -22,7 +22,7 @@ config 'alias' 'private_alias'
 	option 'ipaddr' '192.168.20.81'
 	option 'netmask' '255.255.255.0'
 
-config 'interface' 'wlan'
+config 'interface' 'adhoc'
 	option 'ifname' 'wlan2'
 	option 'proto'	'none'
 	option 'mtu'	'1527'
