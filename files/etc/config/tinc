@@ -4,6 +4,8 @@ config tinc-net intracity
 	option generate_keys 1
 	option Name NONAME
 	option Mode switch
+	option DirectOnly 1
+	option Forwarding off
 	list ConnectTo aftermath
 	option Compression 10
 	option GraphDumpFile /tmp/log/tinc.intracity.dot
