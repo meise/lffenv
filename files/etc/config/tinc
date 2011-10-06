@@ -5,6 +5,7 @@ config tinc-net intracity
 	option Name NONAME
 	option Mode switch
 	list ConnectTo aftermath
+	list ConnectTo 54e6fcaf4380
 	option Compression 10
 	option GraphDumpFile /tmp/log/tinc.intracity.dot
 
@@ -24,4 +25,9 @@ config tinc-host NONAME
 config tinc-host aftermath
 	option net intracity
 	list Address 193.34.68.223
+	option Port 1194
+
+config tinc-host 54e6fcaf4380
+	option net intracity
+	list Address warumdarum.dyndns.org
 	option Port 1194
