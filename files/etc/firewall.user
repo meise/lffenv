@@ -5,11 +5,11 @@
 . /etc/functions.sh
 
 config_load network
-config_get ip4addr "private_alias" ipaddr
 
 # Only allow telnet access from a link local address on the WAN port
 iptables -I INPUT -p tcp --dport 23 -j REJECT
 ip6tables -I INPUT -p tcp --dport 23 -j REJECT
 
-iptables -I INPUT -p tcp -i br-private -d "$ip4addr" --dport 23 -j ACCEPT
+iptables -I INPUT -p tcp -i br-private -d 192.168.0.0/16 --dport 23 -j ACCEPT
+iptables -I INPUT -p tcp -i br-private -d 10.0.0.0/8 --dport 23 -j ACCEPT
 ip6tables -I INPUT -p tcp -i br-private -d fe80::/64 --dport 23 -j ACCEPT
