@@ -2,12 +2,13 @@
 config uhttpd luci
 
 	# HTTP listen addresses, multiple allowed
-	list listen_http	192.168.20.81:80
+#	list listen_http	192.168.20.81:80
 #	list listen_http	[::]:80
 
 	# HTTPS listen addresses, multiple allowed
 #	list listen_https	192.168.10.1:443
 #	list listen_https	[::]:443
+	list listen_https	0.0.0.0:443
 
 	# Server document root
 	option home		/www
@@ -20,8 +21,8 @@ config uhttpd luci
 	# Certificate and private key for HTTPS.
 	# If no listen_https addresses are given,
 	# the key options are ignored.
-#	option cert		/etc/uhttpd.crt
-#	option key		/etc/uhttpd.key
+	option cert		/etc/uhttpd.crt
+	option key		/etc/uhttpd.key
 
 	# CGI url prefix, will be searched in docroot.
 	# Default is /cgi-bin
@@ -129,3 +130,9 @@ config uhttpd info
 
 	# Configuration file in busybox httpd format
 #	option config	/etc/httpd.conf
+
+config cert px5g
+	option bits 2048
+	option country ZZ
+	option state 'Freifunk'
+	option location 'New Liberty'

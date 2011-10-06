@@ -13,3 +13,11 @@ ip6tables -I INPUT -p tcp --dport 23 -j REJECT
 iptables -I INPUT -p tcp -i br-private -d 192.168.0.0/16 --dport 23 -j ACCEPT
 iptables -I INPUT -p tcp -i br-private -d 10.0.0.0/8 --dport 23 -j ACCEPT
 ip6tables -I INPUT -p tcp -i br-private -d fe80::/64 --dport 23 -j ACCEPT
+
+# Only allow access to web interface on private network interfaces
+iptables -I INPUT -p tcp --dport 443 -j REJECT
+ip6tables -I INPUT -p tcp --dport 443 -j REJECT
+
+iptables -I INPUT -p tcp -i br-private -d 192.168.0.0/16 --dport 443 -j ACCEPT
+iptables -I INPUT -p tcp -i br-private -d 10.0.0.0/8 --dport 443 -j ACCEPT
+ip6tables -I INPUT -p tcp -i br-private -d fe80::/64 --dport 443 -j ACCEPT
