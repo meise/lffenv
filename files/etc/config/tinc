@@ -6,6 +6,7 @@ config tinc-net intracity
 	option Mode switch
 	list ConnectTo freifunk
 	option Compression 10
+	option Cipher none
 	option GraphDumpFile /tmp/log/tinc.intracity.dot
 
 config tinc-net private
