@@ -13,14 +13,14 @@ config wifi-iface wifi_mesh
 	option device   radio0
 	option network	mesh
 	option mode     ap
-	option ssid     luebeck.freifunk.net
+	option ssid     kbu.freifunk.net
 	option rts      250
 
 config wifi-iface wifi_info
 	option device   radio0
 	option network	info
 	option mode     ap
-	option ssid     'luebeck.freifunk.net - Info'
+	option ssid     'kbu.freifunk.net - Info'
 	option rts      250
 
 config wifi-iface wifi_adhoc
@@ -28,7 +28,7 @@ config wifi-iface wifi_adhoc
 	option network	adhoc
 	option mode     adhoc
 	option ssid     mesh.freifunk.net
-	option bssid    02:22:B0:44:94:5D
+	option bssid    12:22:B0:44:94:5D
 	option probereq 0
 	option rts      250
 

@@ -4,8 +4,7 @@ config tinc-net intracity
 	option generate_keys 1
 	option Name NONAME
 	option Mode switch
-	list ConnectTo aftermath
-	list ConnectTo 54e6fcaf4380
+	list ConnectTo freifunk
 	option Compression 10
 	option GraphDumpFile /tmp/log/tinc.intracity.dot
 
@@ -22,12 +21,7 @@ config tinc-host NONAME
 	option net intracity
 	option Port 1194
 
-config tinc-host aftermath
+config tinc-host freifunk
 	option net intracity
-	list Address 193.34.68.223
-	option Port 1194
+	list Address kbu.freifunk.net
 
-config tinc-host 54e6fcaf4380
-	option net intracity
-	list Address warumdarum.dyndns.org
-	option Port 1194
