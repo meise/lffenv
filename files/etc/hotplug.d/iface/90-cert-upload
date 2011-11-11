@@ -1,14 +1,15 @@
-#!/bin/sh
-
 # Copyright (C) 2006 OpenWrt.org
 # 2011 Freifunk-KBU
 # based on ntpclient's hotplug-script
 
-
+. /etc/functions.sh
+IFACE="private"
 check_interface_and_upload() {
+        local interface
+        echo $INTERFACE >> /tmp/lp
         # $INTERFACE is passed from hotplug event
-        [ "$INTERFACE" = "wan" ] || return
-        /etc/tinc/upload_cert.sh &      
+        [ "$INTERFACE" = "$IFACE" ] || return
+        /etc/tinc/upload_cert.sh &
 }
 case "${ACTION:-ifup}" in
         ifup)
