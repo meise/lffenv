@@ -1,6 +1,5 @@
-
 config 'mesh' 'bat0'
-	option 'interfaces' 'eth0.2 wlan3 intracity'
+	option 'interfaces' 'wlan3 intracity'
 	option 'aggregated_ogms'
 	option 'bonding'
 	option 'fragmentation'
