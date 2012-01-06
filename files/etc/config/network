@@ -13,7 +13,7 @@ config 'interface' 'mesh'
 
 config 'interface' 'private'
 	option 'type' 'bridge'
-	option 'ifname' 'eth0.2'
+	option 'ifname' 'eth1'
 	option 'proto' 'dhcp'
 
 config 'alias' 'private_alias'
@@ -40,8 +40,3 @@ config 'switch_vlan' 'eth0_1'
 	option 'device' 'eth0'
 	option 'vlan' '1'
 	option 'ports' '1 2 3 4 5t'
-
-config 'switch_vlan' 'eth0_2'
-	option 'device' 'eth0'
-	option 'vlan' '2'
-	option 'ports' '0 5t'
