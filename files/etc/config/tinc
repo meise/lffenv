@@ -4,7 +4,10 @@ config tinc-net intracity
 	option generate_keys 1
 	option Name NONAME
 	option Mode switch
-	list ConnectTo freifunk
+	list ConnectTo vpn1
+	list ConnectTo vpn2
+	list ConnectTo vpn3
+	list ConnectTo vpn4
 	option Compression 10
 	option Cipher none
 	option GraphDumpFile /tmp/log/tinc.intracity.dot
