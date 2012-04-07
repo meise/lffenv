@@ -31,7 +31,7 @@ config tinc-host vpn1
 
 config tinc-host vpn2
 	option net intracity
-	list Address vpn1.kbu.freifunk.net
+	list Address vpn2.kbu.freifunk.net
 
 config tinc-host vpn3
 	option net intracity
