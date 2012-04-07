@@ -23,7 +23,7 @@ config tinc-net private
 
 config tinc-host NONAME
 	option net intracity
-	option Port 655
+	option Port 1194
 
 config tinc-host vpn1
 	option net intracity
