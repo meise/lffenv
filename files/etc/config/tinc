@@ -20,9 +20,22 @@ config tinc-net private
 
 config tinc-host NONAME
 	option net intracity
-	option Port 1194
+	option Port 655
 
-config tinc-host freifunk
+config tinc-host vpn1
 	option net intracity
-	list Address 212.201.68.130
+	list Address vpn1.kbu.freifunk.net
+
+config tinc-host vpn2
+	option net intracity
+	list Address vpn1.kbu.freifunk.net
+
+config tinc-host vpn3
+	option net intracity
+	list Address vpn3.kbu.freifunk.net
+
+config tinc-host vpn4
+	option net intracity
+	list Address vpn4.kbu.freifunk.net
+
 
