@@ -4,7 +4,7 @@ config tinc-net intracity
 	option generate_keys 1
 	option Name NONAME
 	option Mode switch
-	list ConnectTo freifunk
+	list ConnectTo vpn1
 	option Compression 10
 	option Cipher none
 	option GraphDumpFile /tmp/log/tinc.intracity.dot
@@ -28,7 +28,7 @@ config tinc-host vpn1
 
 config tinc-host vpn2
 	option net intracity
-	list Address vpn1.kbu.freifunk.net
+	list Address vpn2.kbu.freifunk.net
 
 config tinc-host vpn3
 	option net intracity
